@@ -1,0 +1,288 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Thank You for Recycling</title> 
+    <style> 
+        /* Stylesheet goes here */ 
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f2f2f2; 
+            margin: 0; 
+            padding: 0; 
+        } 
+ 
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 40px; 
+            background-color: #fff; 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+            border-radius: 5px; 
+            text-align: center; 
+        } 
+ 
+        h1 { 
+            font-size: 36px; 
+            color: #333; 
+            margin: 0; 
+            margin-bottom: 20px; 
+  } 
+ 
+        p { 
+            font-size: 20px; 
+            color: #666; 
+            margin: 0; 
+            margin-bottom: 20px; 
+        } 
+ 
+        .button-container { 
+            margin-top: 30px; 
+        } 
+ 
+        .button { 
+            display: inline-block; 
+            padding: 12px 24px; 
+            margin-right: 10px; 
+            background-color: #007bff; 
+            color: #fff; 
+            font-size: 18px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            transition: background-color 0.3s ease; 
+        } 
+ 
+        .button:hover { 
+            background-color: #0056b3; 
+        } 
+ 
+        .footer { 
+            margin-top: 40px; 
+            font-size: 14px; 
+            color: #999; 
+        } 
+ 
+        .quiz { 
+            background-color: #eee; 
+            padding: 80px 20px; 
+            text-align: center; 
+        } 
+ 
+        .quiz h2 { 
+            font-size: 36px; 
+            margin: 0 0 40px; 
+        } 
+		 .quiz form { 
+            display: inline-block; 
+            text-align: left; 
+        } 
+ 
+        .quiz fieldset { 
+            border: none; 
+            margin: 0; 
+            padding: 0; 
+        } 
+ 
+        .quiz legend { 
+            font-size: 24px; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+        } 
+ 
+        .quiz label { 
+            display: block; 
+            font-size: 20px; 
+            margin: 20px 0; 
+        } 
+ 
+        .quiz input[type="radio"] { 
+            margin-right: 10px; 
+        } 
+ 
+        .quiz button[type="submit"] { 
+            background-color: #fff; 
+            color: #333; 
+            padding: 10px 20px; 
+            font-size: 20px; 
+            margin-top: 30px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            border: none; 
+            cursor: pointer; 
+        } 
+ 
+        .quiz button[type="submit"]:hover { 
+            background-color: #eee; 
+        } 
+ 
+        .quiz .score { 
+            font-size: 24px; 
+            margin-top: 20px;
+			  } 
+ 
+        .quiz .feedback { 
+            font-size: 16px; 
+            margin-top: 10px; 
+        } 
+    </style> 
+</head> 
+ 
+    <section class="quiz"> 
+        <h2>Test your recycling knowledge</h2> 
+        <form id="quizForm"> 
+            <fieldset> 
+                <legend>Question 1</legend> 
+                <p>What can you recycle in the blue bin?</p> 
+                <label> 
+                    <input type="radio" name="q1" value="a"> 
+                    a) Plastic bags 
+                </label> 
+                <br> 
+                <label> 
+                    <input type="radio" name="q1" value="b"> 
+                    b) Glass bottles 
+                </label> 
+                <br> 
+                <label> 
+                    <input type="radio" name="q1" value="c"> 
+                    c) Food waste 
+                </label> 
+                <p class="feedback"></p> 
+            </fieldset> 
+            <fieldset> 
+                <legend>Question 2</legend> 
+                <p>Why is recycling important?</p> 
+                <label> 
+                    <input type="radio" name="q2" value="a"> 
+                    a) It reduces greenhouse gas emissions 
+                </label> 
+                <br> 
+                <label> 
+                    <input type="radio" name="q2" value="b"> 
+                    b) It saves money 
+                </label> 
+                <br> 
+                <label> 
+                    <input type="radio" name="q2" value="c">
+					  c) It's fun 
+                </label> 
+                <p class="feedback"></p> 
+            </fieldset> 
+            <fieldset> 
+                <legend>Question 3</legend> 
+                <p>How should you prepare recyclables?</p> 
+                <label> 
+                    <input type="radio" name="q3" value="a"> 
+                    a) Leave them dirty 
+                </label> 
+                <br> 
+                <label> 
+                    <input type="radio" name="q3" value="b"> 
+                    b) Rinse them clean 
+                </label> 
+                <br> 
+                <label> 
+                    <input type="radio" name="q3" value="c"> 
+                    c) Put them in a plastic bag 
+                </label> 
+                <p class="feedback"></p> 
+            </fieldset> 
+            <button type="submit">Submit</button> 
+        </form> 
+        <p class="score"></p> 
+    </section> 
+ 
+    <script> 
+        // Define the quiz questions and answers 
+        const quizQuestions = [ 
+            { 
+                question: 'What can you recycle in the blue bin?', 
+                answers: [ 
+                    { text: 'Plastic bags', isCorrect: false }, 
+                    { text: 'Glass bottles', isCorrect: true }, 
+                    { text: 'Food waste', isCorrect: false } 
+                ] 
+            }, 
+            { 
+                question: 'Why is recycling important?', 
+                answers: [ 
+                    { text: 'It reduces greenhouse gas emissions', isCorrect: 
+true }, 
+                    { text: 'It saves money', isCorrect: true }, 
+                    { text: 'It\'s fun', isCorrect: false } 
+  ] 
+            }, 
+            { 
+                question: 'How should you prepare recyclables?', 
+                answers: [ 
+                    { text: 'Leave them dirty', isCorrect: false }, 
+                    { text: 'Rinse them clean', isCorrect: true }, 
+                    { text: 'Put them in a plastic bag', isCorrect: false } 
+                ] 
+            } 
+        ]; 
+ 
+        // Shuffle the quiz questions 
+        function shuffle(array) { 
+            for (let i = array.length - 1; i > 0; i--) { 
+                const j = Math.floor(Math.random() * (i + 1)); 
+                [array[i], array[j]] = [array[j], array[i]]; 
+            } 
+            return array; 
+        } 
+ 
+        shuffle(quizQuestions); 
+ 
+        // Add event listener to the quiz form 
+        const quizForm = document.getElementById('quizForm'); 
+        const feedbackElements = document.getElementsByClassName('feedback'); 
+        const scoreElement = document.querySelector('.quiz .score'); 
+ 
+        quizForm.addEventListener('submit', function(event) { 
+            event.preventDefault(); 
+ 
+            // Get the user's answers 
+            const userAnswers = { 
+                q1: quizForm.elements.q1.value, 
+                q2: quizForm.elements.q2.value, 
+                q3: quizForm.elements.q3.value 
+            }; 
+ 
+            // Calculate the score 
+            let score = 0; 
+ 
+            for (let i = 0; i < quizQuestions.length; i++) { 
+                const question = quizQuestions[i]; 
+                const userAnswer = userAnswers['q' + (i + 1)].toLowerCase(); 
+                const feedbackElement = feedbackElements[i]; 
+				  if (userAnswer) { 
+                    const answer = question.answers.find(answer => 
+answer.isCorrect); 
+                    const isCorrect = userAnswer === answer.text.toLowerCase(); 
+ 
+                    if (isCorrect) { 
+                        score++; 
+                        feedbackElement.textContent = 'Correct!'; 
+                        feedbackElement.style.color = 'green'; 
+                    } else { 
+                        feedbackElement.textContent = 'Incorrect.'; 
+                        feedbackElement.style.color = 'red'; 
+                    } 
+                } else { 
+                    feedbackElement.textContent = 'Please select an answer.'; 
+                    feedbackElement.style.color = 'black'; 
+                } 
+            } 
+ 
+            // Display the score 
+            scoreElement.textContent = `You got ${score} out of 
+${quizQuestions.length} correct!`; 
+ 
+            // Redirect to another page after a delay 
+            setTimeout(function() { 
+                window.location.href = 'main.html'; // Replace 'another
+page.html' with the URL of the page you want to redirect to 
+            }, 1500); // Change the delay (in milliseconds) as desired 
+        }); 
+    </script> 
+</body> 
+</html>

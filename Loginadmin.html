@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">
+<img src="Recycle001" alt="Admin Logo">
+<h2>Green Waste Family</h2>
+</div>
+</nav>
+</header>
+<main>
+<div class="container">
+<div class="card">
+<div class="card-header">
+<h2>Admin Login</h2>
+</div>
+<div class="card-body">
+<form id="login-form" action="loginadmin.php" method="POST">
+<div class="form-group">
+<label for="username">Username</label>
+<input type="text" id="username" name="username" required>
+</div>
+<div class="form-group">
+<label for="password">Password</label>
+<input type="password" id="password" name="password" required>
+</div>
+<button type="submit" class="btn">Login</button>
+</form>
+<div id="notification"></div>
+</div>
+</div>
+</div>
+</main>
+<footer>
+<div class="container">
+<p>&copy; 2023 Admin. All rights reserved.</p>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+background-color: #f2f2f2;
+229 | P a g e
+font-family: Arial, sans-serif;
+}
+header {
+background-color: #048311;
+padding: 20px;
+}
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logo img {
+width: 50px;
+margin-right: 10px;
+}
+.logo h2 {
+font-size: 24px;
+font-weight: bold;
+color: #fff;
+margin: 0;
+}
+main {
+min-height: calc(100vh - 120px);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.container {
+max-width: 600px;
+width: 100%;
+}
+.card {
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+padding: 20px;
+}
+.card-header {
+border-bottom: 1px solid #ccc;
+margin-bottom: 20px;
+}
+.card-header h2 {
+font-size: 24px;
+font-weight: bold;
+}
+.form-group {
+margin-bottom: 20px;
+}
+label {
+display: block;
+margin-bottom: 10px;
+font-size: 16px;
+font-weight: bold;
+color: #555;
+}
+input[type="text"],
+input[type="password"] {
+width: 100%;
+padding: 10px;
+border-radius: 5px;
+border: 1px solid #ccc;
+font-size: 16px;
+}
+.btn {
+display: block;
+width: 100%;
+background-color: #045f0d;
+color: #fff;
+border: none;
+border-radius: 5px;
+padding: 10px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s ease-in-out;
+}
+.btn:hover {
+background-color: #2bab49;
+}
+footer {
+background-color: #fff;
+border-top: 1px solid #ccc;
+padding: 20px;
+}
+footer p {
+font-size: 14px;
+color: #555;
+}
+</style>
+<script>
+document.getElementById("login-form").addEventListener("submit", 
+function(event) {
+event.preventDefault(); // Prevent the form from submitting
+// Get the email and password values
+var username = document.getElementsByName("username")[0].value;
+var password = document.getElementsByName("password")[0].value;
+// Create a new XMLHttpRequest object
+var xhr = new XMLHttpRequest();
+// Configure the request
+xhr.open("POST", "loginadmin.php");
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+// Define the callback function
+xhr.onload = function() {
+if (xhr.status === 200) {
+var response = JSON.parse(xhr.responseText);
+showAlert(response.message); // Display the response message as a 
+notification
+if (response.status === 'success') {
+// Redirect to the next page
+window.location.href = "report.php";
+}
+} else {
+showAlert("Error: " + xhr.status);
+}
+};
+// Prepare the request data
+var data = "username=" + encodeURIComponent(username) + "&password=" + 
+encodeURIComponent(password);
+// Send the request
+xhr.send(data);
+});
+function showAlert(message) {
+alert(message);
+}
+</script>

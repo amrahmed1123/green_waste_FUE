@@ -1,0 +1,887 @@
+!DOCTYPE html
+<html>
+<body>
+<div class="popUp"></div> <!-- default pop up div -->
+<div class="dimmer"></div> <!-- "full screen" background behind .popUp div -->
+<header class="header clearfix">
+<div class="clearfix display-flex align-items contentHolder" data-items="center">
+<div class="page-header">
+<div class="logo"><a href="main.html"><img src="Recycle001.png " alt="logo Placeholder"></a></div>
+<h2><a href="main.html">Green Waste</a></h2>
+</div>
+<nav class="menu">
+<ol>
+<li class="mainMenu" id="login"><a href="login.html">Login</a></li>
+<li class="mainMenu" id="register"><a href="signup.html">Register</a></li>
+<li class="mainMenu"><a href="wastetype.html">Recycle?</a>
+<ul class="submenu">
+<li class="subOption"><a href="wastetype.html">Waste 
+Type</a></li>
+<li class="subOption"><a
+href="appointment.html">Chane Date</a></li>
+<li class="subOption"><a href=""></a></li>
+</ul>
+</li>
+<li class="mainMenu mobileSub"><a href="">SubM</a></li>
+<li class="mainMenu mobileSub"><a href="">SubMenu 2</a></li>
+<li class="mainMenu mobileSub"><a href="">SubMenu 3</a></li>
+<li class="mainMenu"><a href="why.html">Why recycle?</a></li>
+<li class="mainMenu"><a href="main.html  #contact">Contact</a></li>
+<li class="mainMenu" id="logout"><a href="logout.php">logout</a></li>
+</ol>
+<div class="hamburger"><span></span></div>
+<div class="dimmer"></div>
+</nav>
+<ul class="social">
+<li><a target="_blank" href="https://www.facebook.com/login.php"><svg fill="#000000" width="800px" height="800px" viewBox="-7 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-facebook"><path d='M2.046 3.865v2.748H.032v3.36h2.014v9.986H6.18V9.974h2.775s.26-1.611.386-3.373H6.197V4.303c0-.343.45-.805.896-.805h2.254V0H6.283c-4.34 0-4.237 3.363-4.237 3.865z' /></svg></a></li>
+<li><a target="_blank" href="https://twitter.com/login"><svg fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M21.1195379,4.50827277 L22.5342762,4.67349373 L21.8983361,5.94799866 C21.5882127,6.56952557 21.2777825,7.19105241 20.9670457,7.81257919 C20.9301859,7.94421707 20.8654361,8.05962088 20.7696585,8.20987253 C20.7296392,8.27265296 20.5929134,8.47235578 20.5865199,8.48194389 C20.5504194,8.53608265 20.5237244,8.57877603 20.5045116,8.612985 L20.5045116,11.0015223 C20.5045116,17.1135105 14.5895212,20.997433 9.0035407,20.997433 C7.86051052,20.997433 6.9920671,20.942655 5.99764648,20.7256544 C4.3611498,20.3685411 3.14327382,19.6586563 2.58597331,18.4179897 L2.01221067,17.1406749 L3.40658935,17.0124385 C4.66800583,16.8964301 5.76168918,16.6561247 6.60158598,16.3343284 C4.29576888,15.9635022 3.00360004,14.9507867 3.00360004,13.0488856 L3.00360004,12.0488856 L4.00360004,12.0488856 C4.22331194,12.0488856 4.42142655,12.031056 4.59854401,11.9983407 C2.86800086,10.9636463 2.00122175,9.30378982 2.00122175,7.00152231 C2.00103266,6.90339488 2.00103266,6.90339488 2.00044255,6.79847339 C1.99394143,5.63802549 2.05627216,5.01796633 2.37394794,4.22659275 C2.57754322,3.7194092 2.87183091,3.24988363 3.26789948,2.81966825 L4.02250949,2 L4.7561743,2.8384678 C7.17393937,5.60160726 9.56394913,7.2779529 12.0041718,7.48072062 C12.0145984,4.93104737 13.9415349,3.00152231 16.5043352,3.00152231 C17.6990777,3.00152231 18.7828136,3.4550135 19.6344797,4.27272548 C20.1006133,4.36850877 20.5956593,4.44709134 21.1195379,4.50827277 Z M18.9086413,6.1620157 L18.6020809,6.09259834 L18.390364,5.86027523 C17.8784597,5.29854774 17.2359357,5.00152231 16.5043352,5.00152231 C15.0413633,5.00152231 14.0041293,6.04390721 14.0041293,7.50152231 C14.0041293,7.73973624 13.9979686,7.88941876 13.9682939,8.0861482 C13.8498823,8.87116329 13.4095655,9.50152231 12.5040999,9.50152231 C9.50606541,9.50152231 6.80135608,7.8954174 4.16389262,5.15228013 C4.0279242,5.56560795 3.99594732,5.99047388 4.00041117,6.78726907 C4.0010134,6.8938353 4.0010134,6.8938353 4.00122175,7.00152231 C4.00122175,9.04953038 4.83093434,10.1697716 6.79546534,10.7941852 L7.49255437,11.0157505 L7.49255437,11.7472041 C7.49255437,12.6341912 6.65221936,13.4691441 5.42268337,13.8431328 C5.98631287,14.270758 7.13900191,14.5015223 9.00389409,14.5015223 L10.0038941,14.5015223 L10.0038941,15.5015223 C10.0038941,16.9342605 8.35761853,18.0560539 5.87074839,18.6418567 C6.68178057,18.8903379 7.76165536,18.997433 9.0035407,18.997433 C13.617962,18.997433 18.5045116,15.788809 18.5045116,11.0015223 L18.5045116,8.50152231 C18.5045116,8.20773972 18.5896702,7.95273379 18.731148,7.68759331 C18.7864644,7.58392608 18.8473687,7.48509444 18.9225327,7.37237332 C18.936682,7.35115417 18.9891853,7.27426284 19.0308673,7.21279246 L19.1101243,7.05428768 C19.2385516,6.79744834 19.3669263,6.54060902 19.4952487,6.28376971 C19.2958216,6.24599305 19.1002871,6.20541186 18.9086413,6.1620157 Z"/>
+</svg></a></li>
+<li><a target="_blank" href="https://www.instagram.com/accounts/login/"><svg fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M8,2 L16,2 C19.3137085,2 22,4.6862915 22,8 L22,16 C22,19.3137085 19.3137085,22 16,22 L8,22 C4.6862915,22 2,19.3137085 2,16 L2,8 C2,4.6862915 4.6862915,2 8,2 Z M8,4 C5.790861,4 4,5.790861 4,8 L4,16 C4,18.209139 5.790861,20 8,20 L16,20 C18.209139,20 20,18.209139 20,16 L20,8 C20,5.790861 18.209139,4 16,4 L8,4 Z M12,17 C9.23857625,17 7,14.7614237 7,12 C7,9.23857625 9.23857625,7 12,7 C14.7614237,7 17,9.23857625 17,12 C17,14.7614237 14.7614237,17 12,17 Z M12,15 C13.6568542,15 15,13.6568542 15,12 C15,10.3431458 13.6568542,9 12,9 C10.3431458,9 9,10.3431458 9,12 C9,13.6568542 10.3431458,15 12,15 Z M17,8 C16.4477153,8 16,7.55228475 16,7 C16,6.44771525 16.4477153,6 17,6 C17.5522847,6 18,6.44771525 18,7 C18,7.55228475 17.5522847,8 17,8 Z"/>
+</svg></a></li>
+</ul>
+</div>
+</header>
+<script
+src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src="js/index.js"></script>
+ 
+ 
+ 
+</body> 
+ 
+<style> 
+    /* Additional CSS styles */ 
+    .page-header { 
+      display: flex; 
+      align-items: center; 
+      background-color: #ffffff; 
+      padding: 20px; 
+      color: #fff; 
+    } 
+    .page-header .logo { 
+      margin-left: 2px; 
+    } 
+    .page-header h2 { 
+      margin: 0; 
+    } 
+    .page-header a { 
+      color: #03862f; 
+      text-decoration: none; 
+    } 
+  </style> 
+  
+  <script> 
+    // JavaScript code 
+    document.addEventListener("DOMContentLoaded", function() { 
+      // Add event listener to logo image 
+	   var logoImage = document.querySelector(".logo img"); 
+      logoImage.addEventListener("mouseover", function() { 
+        // Change the opacity of the logo image on mouseover 
+        logoImage.style.opacity = "0.8"; 
+      }); 
+      logoImage.addEventListener("mouseout", function() { 
+        // Reset the opacity of the logo image on mouseout 
+        logoImage.style.opacity = "1"; 
+      }); 
+    }); 
+  </script> 
+    <style> 
+  /* == Header ================================================= */ 
+header { 
+  background-color: #ffffff; 
+  border-bottom: 4px solid #008c38; 
+  font-family: helvetica, arial, sans-serif; 
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 110; 
+  -moz-transition: top 0.5s ease; 
+  -o-transition: top 0.5s ease; 
+  -webkit-transition: top 0.5s ease; 
+  transition: top 0.5s ease; 
+   
+} 
+header.hidden { 
+  top: -6em; 
+} 
+@media screen and (max-width: 1024px) { 
+  header.hidden { 
+    top: -7em; 
+  } 
+} 
+@media screen and (max-width: 600px) { 
+  header.hidden .contentHolder nav.menu { 
+    top: -3em; 
+  } 
+} 
+header nav { 
+  float: right; 
+  margin-right: 15px; 
+  text-transform: uppercase; 
+  z-index: 95; 
+} 
+header nav ol { 
+  margin: 0; 
+  padding: 0; 
+  position: relative; 
+} 
+header nav ol li { 
+  display: inline-block; 
+  list-style: none; 
+  position: relative; 
+  margin: 0; 
+  padding: 0; 
+} 
+header nav ol li:hover ul { 
+  display: block; 
+} 
+header nav ol li.mobileMenu { 
+  display: none; 
+} 
+header nav ol li.mobileSub { 
+  display: none; 
+} 
+header nav ol li a { 
+  color: #8ec190; 
+  cursor: pointer; 
+  display: block; 
+  font-size: 16px; 
+  padding: 30px 20px; 
+  position: relative; 
+  text-decoration: none; 
+} 
+header nav ol li a:after { 
+  content: ''; 
+  border-bottom: 1px dashed #9fee9f; 
+  bottom: 21px; 
+  left: 10%; 
+  opacity: 0; 
+  position: absolute; 
+  width: 80%; 
+  z-index: 111; 
+  -moz-transition-property: opacity; 
+  -o-transition-property: opacity; 
+  -webkit-transition-property: opacity; 
+  transition-property: opacity; 
+  -moz-transition-duration: 0.35s; 
+  -o-transition-duration: 0.35s;
+   -webkit-transition-duration: 0.35s; 
+  transition-duration: 0.35s; 
+} 
+header nav ol li a:visited { 
+  color: #72e078; 
+} 
+header nav ol li a:visited:after { 
+  content: ''; 
+  opacity: 1; 
+} 
+header nav ol li a:hover { 
+  color: #524c4c; 
+} 
+header nav ol li a:hover:after { 
+  content: ''; 
+  opacity: 1; 
+} 
+header nav ol li a.active { 
+  color: #615858; 
+} 
+header nav ol li a.active:after { 
+  content: ''; 
+  opacity: 1; 
+} 
+header nav ol li a.active:visited { 
+  color: #808080; 
+} 
+header nav ol li a.active:visited:after { 
+  content: ''; 
+  opacity: 1; 
+} 
+header nav ol li svg { 
+  display: none; 
+} 
+header nav ol ul.submenu { 
+  background-color: #67a66e; 
+  display: none; 
+  left: 0; 
+  padding: 10px 0; 
+  position: absolute; 
+  top: 100%; 
+  width: 150px; 
+  -moz-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.05); 
+  -webkit-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.05); 
+  box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.05); 
+} 
+header nav ol ul.submenu li { 
+  display: block; 
+  width: 100%; 
+} 
+header nav ol ul.submenu li a { 
+  color: #fff; 
+  line-height: 25px; 
+  padding: 10px 27px; 
+  text-decoration: none; 
+} 
+header nav ol ul.submenu li a:after { 
+  content: ''; 
+  display: none; 
+} 
+header nav ol ul.submenu li a:hover { 
+  color: #808080; 
+  background-color: #fff; 
+} 
+header nav ol ul.submenu li a.button { 
+  border: none; 
+  color: #fff; 
+  font-size: ems(18px); 
+  margin: 0; 
+} 
+header nav ol ul.submenu li a.button:hover { 
+  background: none; 
+  color: #808080; 
+} 
+header nav ol ul.submenu li:before { 
+  content: ""; 
+} 
+header nav .dimmer { 
+  left: 100%; 
+  z-index: 0; 
+  width: 100%; 
+  height: 100%; 
+  position: fixed; 
+  top: 0; 
+  background-color: rgba(0, 0, 0, 0.7); 
+} 
+header nav .dimmer.active { 
+  display: block; 
+  left: 50%; 
+  -moz-transition: all 0.5s ease; 
+  -o-transition: all 0.5s ease; 
+  -webkit-transition: all 0.5s ease; 
+ transition: all 0.5s ease; 
+} 
+header nav .hamburger { 
+  display: none; 
+  z-index: 1; 
+} 
+header .contentHolder { 
+  padding: 0 25px; 
+  display: -webkit-flex; 
+  display: flex; 
+  -webkit-align-items: center; 
+  align-items: center; 
+} 
+header .contentHolder .logo a img { 
+  max-height: 50px; 
+} 
+@media screen and (max-width: 1250px) { 
+  header .contentHolder nav ol li a { 
+    padding-left: 8px; 
+    padding-right: 8px; 
+  } 
+  header .contentHolder .logo { 
+    max-width: 325px; 
+  } 
+} 
+@media screen and (max-width: 1175px) { 
+  header .contentHolder nav ol li a { 
+    font-size: ems(17px); 
+  } 
+  header .contentHolder .logo { 
+    max-width: 300px; 
+  } 
+} 
+@media screen and (max-width: 1100px) { 
+  header .contentHolder nav ol li a { 
+    font-size: ems(16px); 
+    padding-left: 5px; 
+    padding-right: 5px; 
+  } 
+  header .contentHolder .logo { 
+    max-width: 285px; 
+  } 
+} 
+@media screen and (max-width: 1024px) { 
+  header .contentHolder { 
+    -webkit-flex-wrap: wrap; 
+flex-wrap: wrap; 
+  } 
+  header .contentHolder nav { 
+    order: 2; 
+    width: 100%; 
+    margin-right: 0; 
+    padding-left: 25px; 
+    padding-right: 25px; 
+  } 
+  header .contentHolder nav ol { 
+    display: -webkit-flex; 
+    display: flex; 
+    -webkit-justify-content: space-around; 
+    justify-content: space-around; 
+  } 
+  header .contentHolder nav ol li a { 
+    font-size: ems(18px); 
+    padding: 18px; 
+  } 
+  header .contentHolder nav ol li a:after { 
+    content: ''; 
+    bottom: 14px; 
+  } 
+  header .contentHolder .logo { 
+    margin-top: 15px; 
+    max-width: 325px; 
+    padding-top: 0; 
+  } 
+} 
+@media screen and (max-width: 850px) { 
+  header .contentHolder nav { 
+    padding-left: 12px; 
+    padding-right: 12px; 
+  } 
+} 
+@media screen and (max-width: 800px) { 
+  header .contentHolder nav { 
+    padding-left: 0px; 
+    padding-right: 0px; 
+  } 
+} 
+@media only screen and (max-width: 767px) { 
+  header .contentHolder nav ol li a { 
+    font-size: ems(17px); 
+    padding-left: 10px; 
+    padding-right: 10px;
+	 } 
+  header .contentHolder nav ol ul.submenu li a { 
+    font-size: .8em; 
+  } 
+  header .contentHolder nav ol ul.submenu.sub-about { 
+    width: 218px; 
+  } 
+} 
+@media screen and (max-width: 620px) { 
+  header .contentHolder { 
+    padding: 0; 
+    -webkit-flex-direction: column; 
+    flex-direction: column; 
+  } 
+  header .contentHolder nav { 
+    display: block; 
+    height: 45px; 
+    left: 0; 
+    margin: 0; 
+    order: 1; 
+    position: fixed; 
+    top: 0px; 
+    width: 100%; 
+    -moz-transition: top 0.5s ease; 
+    -o-transition: top 0.5s ease; 
+    -webkit-transition: top 0.5s ease; 
+    transition: top 0.5s ease; 
+  } 
+  header .contentHolder nav ol { 
+    background-color: #000; 
+    bottom: 0; 
+    display: block; 
+    left: 0; 
+    margin-left: -1000px; 
+    position: fixed; 
+    top: 0; 
+    width: 75vw; 
+    z-index: 20; 
+    -moz-transition: margin-left 0.5s ease; 
+    -o-transition: margin-left 0.5s ease; 
+    -webkit-transition: margin-left 0.5s ease; 
+    transition: margin-left 0.5s ease; 
+  } 
+  header .contentHolder nav ol.active { 
+    margin-left: 0; 
+    overflow-y: scroll; 
+ -moz-transition: margin-left 0.5s ease; 
+    -o-transition: margin-left 0.5s ease; 
+    -webkit-transition: margin-left 0.5s ease; 
+    transition: margin-left 0.5s ease; 
+  } 
+  header .contentHolder nav ol li { 
+    display: block; 
+    border-bottom: 1px dashed #ffffff; 
+  } 
+  header .contentHolder nav ol li.mobileMenu { 
+    display: block; 
+  } 
+  header .contentHolder nav ol li.mobileMenu.mobileSocial { 
+    border-bottom: none; 
+  } 
+  header .contentHolder nav ol li.mobileMenu ul.social { 
+    display: block; 
+    margin: 0; 
+    padding-left: 15px; 
+  } 
+  header .contentHolder nav ol li.mobileMenu ul.social li { 
+    border-bottom: none; 
+    display: inline-block; 
+  } 
+  header .contentHolder nav ol li.mobileMenu ul.social li:before { 
+    content: ""; 
+  } 
+  header .contentHolder nav ol li.mobileMenu ul.social li a { 
+    width: inherit; 
+    padding: 5px 5px 0 0; 
+  } 
+  header .contentHolder nav ol li.mobileMenu ul.social li svg { 
+    width: 25px; 
+    height: 25px; 
+    margin: 10px 0; 
+  } 
+  header .contentHolder nav ol li.mobileMenu ul.social li svg path { 
+    fill: #fff; 
+  } 
+  header .contentHolder nav ol li.mobileMenu ul.social li svg:hover path { 
+    fill: #808080; 
+    -moz-transition: all 0.5s ease; 
+    -o-transition: all 0.5s ease; 
+    -webkit-transition: all 0.5s ease; 
+    transition: all 0.5s ease; 
+  }
+   header .contentHolder nav ol li a { 
+    display: inline-block; 
+    font-size: ems(16px); 
+    padding: 16px 15px; 
+    width: 85%; 
+    color: #fff; 
+  } 
+  header .contentHolder nav ol li a:after { 
+    content: ''; 
+    display: none; 
+  } 
+  header .contentHolder nav ol li a:visited { 
+    color: #808080; 
+  } 
+  header .contentHolder nav ol li a:hover { 
+    color: #808080; 
+  } 
+  header .contentHolder nav ol li svg { 
+    cursor: pointer; 
+    display: inline-block; 
+    width: 18px; 
+    height: 18px; 
+    margin: 10px 15px 10px 0; 
+  } 
+  header .contentHolder nav ol li svg path { 
+    fill: #ffffff; 
+    -moz-transition: all 0.5s ease; 
+    -o-transition: all 0.5s ease; 
+    -webkit-transition: all 0.5s ease; 
+    transition: all 0.5s ease; 
+  } 
+  header .contentHolder nav ol ul.submenu { 
+    background-color: #000; 
+    display: none; 
+    margin-top: -1px; 
+    max-height: 0; 
+    overflow: hidden; 
+    padding: 0; 
+    position: relative; 
+    width: 100%; 
+  } 
+  header .contentHolder nav ol ul.submenu li a { 
+    color: #ffffff; 
+    font-size: ems(18px); 
+  } 
+  header .contentHolder nav ol ul.submenu li a:hover {
+ color: #808080; 
+  } 
+  header .contentHolder nav ol ul.submenu li a.button { 
+    background-color: #fff; 
+    color: #fff; 
+    border: none; 
+    margin: 0; 
+    max-width: 100%; 
+    text-align: left; 
+  } 
+  header .contentHolder nav ol ul.submenu li a.button:hover { 
+    background-color: #808080; 
+    color: #fff; 
+  } 
+  header .contentHolder nav ol ul.submenu.sub-about { 
+    width: 100%; 
+  } 
+  header .contentHolder nav .hamburger { 
+    display: inline-block; 
+    position: absolute; 
+    top: 22px; 
+    right: 10px; 
+    height: 100%; 
+    padding: 12px 25px; 
+    color: "$header-link-color"; 
+    cursor: pointer; 
+    z-index: 100; 
+  } 
+  header .contentHolder nav .hamburger span { 
+    left: 0; 
+  } 
+  header .contentHolder nav .hamburger span, 
+  header .contentHolder nav .hamburger span:before, 
+  header .contentHolder nav .hamburger span:after { 
+    cursor: pointer; 
+    border-radius: 1px; 
+    height: 7px; 
+    width: 38px; 
+    background: "$header-link-color"; 
+    position: absolute; 
+    display: block; 
+    content: ''; 
+    transition: background 500ms ease-in-out; 
+  } 
+  header .contentHolder nav .hamburger span:before { 
+    top: -13px;
+	 transition: all 500ms ease-in-out; 
+  } 
+  header .contentHolder nav .hamburger span:after { 
+    bottom: -13px; 
+    transition: all 500ms ease-in-out; 
+  } 
+  header .contentHolder nav .hamburger.active span { 
+    background-color: transparent; 
+  } 
+  header .contentHolder nav .hamburger.active span:before, header .contentHolder 
+nav .hamburger.active.active span:after { 
+    top: 0; 
+  } 
+  header .contentHolder nav .hamburger.active span:before { 
+    transition: all 500ms ease-in-out; 
+    transform: rotate(-45deg); 
+  } 
+  header .contentHolder nav .hamburger.active span:after { 
+    transition: all 500ms ease-in-out; 
+    transform: rotate(45deg); 
+  } 
+  header .contentHolder .logo { 
+    order: 2; 
+    margin-bottom: 10px; 
+    margin-left: 21px; 
+    padding-top: 0; 
+    max-width: 100%; 
+  } 
+  header .contentHolder .logo img { 
+    max-width: 100%; 
+  } 
+  header .contentHolder .social { 
+    display: none; 
+  } 
+} 
+header .logo { 
+  float: left; 
+  margin-right: auto; 
+  max-width: 350px; 
+} 
+@media screen and (max-width: 600px) { 
+  header { 
+    border-top: 0; 
+    position: left; 
+  } 
+} 
+.no-scrolling { 
+  overflow: hidden; 
+  position: fixed; 
+} 
+ 
+.social { 
+  line-height: 0; 
+  margin: 0; 
+  padding: 0; 
+  margin-left: 100px; 
+ 
+} 
+.social svg { 
+  width: 25px; 
+  height: 25px; 
+} 
+.social svg:nth-child(1) { 
+  margin: 0 10px; 
+} 
+.social svg path { 
+  fill: #095028; 
+} 
+.social svg:hover path { 
+  fill: #65c384; 
+  -moz-transition: all 0.5s ease; 
+  -o-transition: all 0.5s ease; 
+  -webkit-transition: all 0.5s ease; 
+  transition: all 0.5s ease; 
+} 
+.social li { 
+  list-style: none; 
+  display: inline-block; 
+} 
+.social li:before { 
+  content: ''; 
+} 
+ 
+</style> 
+<script> 
+   $('.hamburger').click(function (e) { 
+        $(this).parent().find('ol').toggleClass('active'); 
+        $(this).toggleClass('active'); 
+        $('.dimmer').toggleClass('active'); 
+        $('body').toggleClass('no-scrolling'); 
+    }); 
+  $('li .icon-mobileMenu').click(function () { 
+        $(this).parent().toggleClass('active'); 
+    }); 
+</script> 
+<head> 
+    <title> Green Waste </title> 
+    <body> 
+      <div class="page-header"> 
+        <h1 > Green Waste </h1> 
+          <p>hhhhhh</p> 
+           
+           
+           
+            </div> 
+ 
+          </div> 
+           
+</div> 
+<h1>Second Step: Choose Your Appointment:</h1> 
+ 
+<div class="formbold-main-wrapper"> 
+  <!-- Author: FormBold Team --> 
+  <!-- Learn More: https://formbold.com --> 
+  <div class="formbold-form-wrapper"> 
+    <form action="appointment.php" method="POST"> 
+      <div class="formbold-mb-5"> 
+        <label for="phone" class="formbold-form-label"> Phone Number </label> 
+        <input 
+          type="text" 
+          name="phone" 
+          id="phone" 
+          placeholder="Enter your phone number" 
+          class="formbold-form-input" 
+        /> 
+      </div> 
+      <div class="formbold-mb-5"> 
+        <form action="wastetype.php" method="POST"> 
+        <label for="email" class="formbold-form-label"> Email Address </label> 
+        <input 
+          type="email" 
+          name="email" 
+          id="email" 
+          placeholder="Enter your email" 
+          class="formbold-form-input" 
+        />
+		 </div> 
+      <div class="flex flex-wrap formbold--mx-3"> 
+        <div class="w-full sm:w-half formbold-px-3"> 
+          <div class="formbold-mb-5 w-full"> 
+            <label for="date" class="formbold-form-label"> Date </label> 
+            <input 
+              type="date" 
+              name="date" 
+              id="date" 
+              class="formbold-form-input" 
+            /> 
+          </div> 
+        </div> 
+        <div class="w-full sm:w-half formbold-px-3"> 
+          <div class="formbold-mb-5"> 
+            <label for="time" class="formbold-form-label"> Time </label> 
+            <input 
+              type="time" 
+              name="time" 
+              id="time" 
+              class="formbold-form-input" 
+            /> 
+          </div> 
+        </div> 
+      </div> 
+ 
+      <div class="formbold-mb-5 formbold-pt-3"> 
+        <label class="formbold-form-label formbold-form-label-2"> 
+          Address Details 
+        </label> 
+        <div class="flex flex-wrap formbold--mx-3"> 
+          <div class="w-full sm:w-half formbold-px-3"> 
+            <div class="formbold-mb-5"> 
+              <input 
+                type="text" 
+                name="area" 
+                id="area" 
+                placeholder="Enter area" 
+                class="formbold-form-input" 
+              /> 
+            </div> 
+          </div> 
+          <div class="w-full sm:w-half formbold-px-3"> 
+            <div class="formbold-mb-5"> 
+              <input 
+                type="text" 
+name="city" 
+                id="city" 
+                placeholder="Enter city" 
+                class="formbold-form-input" 
+              /> 
+            </div> 
+          </div> 
+          <div class="w-full sm:w-half formbold-px-3"> 
+            <div class="formbold-mb-5"> 
+              <input 
+                type="text" 
+                name="state" 
+                id="state" 
+                placeholder="Enter state" 
+                class="formbold-form-input" 
+              /> 
+            </div> 
+          </div> 
+          <div class="w-full sm:w-half formbold-px-3"> 
+            <div class="formbold-mb-5"> 
+              <input 
+                type="text" 
+                name="cpost" 
+                id="cpost" 
+                placeholder="Post Code" 
+                class="formbold-form-input" 
+				
+              /> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+ 
+      <div> 
+        <button onclick="wastetype.html" class="formbold-btn">Book 
+Appointment</button> 
+      </div> 
+    </form> 
+  </div> 
+</div> 
+<style> 
+   h1 { 
+            margin-top: 20px; 
+            text-align: center;  
+        } 
+ 
+  * { 
+margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+  } 
+  body { 
+    font-family: "Inter", Arial, Helvetica, sans-serif; 
+  } 
+  .formbold-mb-5 { 
+    margin-bottom: 20px; 
+  } 
+  .formbold-pt-3 { 
+    padding-top: 12px; 
+  } 
+  .formbold-main-wrapper { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 48px; 
+  } 
+ 
+  .formbold-form-wrapper { 
+    margin: 0 auto; 
+    max-width: 550px; 
+    width: 100%; 
+    background: white; 
+  } 
+  .formbold-form-label { 
+    display: block; 
+    font-weight: 500; 
+    font-size: 16px; 
+    color: #07074d; 
+    margin-bottom: 12px; 
+  } 
+  .formbold-form-label-2 { 
+    font-weight: 600; 
+    font-size: 20px; 
+    margin-bottom: 20px; 
+  } 
+ 
+  .formbold-form-input { 
+    width: 100%; 
+    padding: 12px 24px; 
+    border-radius: 6px; 
+    border: 1px solid #e0e0e0; 
+    background: white; 
+    font-weight: 500; 
+font-size: 16px; 
+    color: #6b7280; 
+    outline: none; 
+    resize: none; 
+  } 
+  .formbold-form-input:focus { 
+    border-color: #0b8c34; 
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05); 
+  } 
+ 
+  .formbold-btn { 
+    text-align: center; 
+    font-size: 16px; 
+    border-radius: 6px; 
+    padding: 14px 32px; 
+    border: none; 
+    font-weight: 600; 
+    background-color: #0c9b3e; 
+    color: white; 
+    width: 100%; 
+    cursor: pointer; 
+  } 
+  .formbold-btn:hover { 
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05); 
+  } 
+ 
+  .formbold--mx-3 { 
+    margin-left: -12px; 
+    margin-right: -12px; 
+  } 
+  .formbold-px-3 { 
+    padding-left: 12px; 
+    padding-right: 12px; 
+  } 
+  .flex { 
+    display: flex; 
+  } 
+  .flex-wrap { 
+    flex-wrap: wrap; 
+  } 
+  .w-full { 
+    width: 100%; 
+  } 
+  @media (min-width: 540px) { 
+    .sm\:w-half { 
+      width: 50%; 
+ } 
+  } 
+</style> 
+<script>
+    document.getElementById("logout").addEventListener("click", function() {
+        // Perform logout actions
+        localStorage.removeItem('loggedIn');
+        document.getElementById("login").style.display = "inline-block";
+        document.getElementById("register").style.display = "inline-block";
+        document.getElementById("logout").style.display = "none";
+        showAlert("You have been logged out.");
+    });
+
+    function showAlert(message) {
+        alert(message);
+    }
+
+    window.onload = function() {
+        if (localStorage.getItem('loggedIn') === "true") {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("register").style.display = "none";
+            document.getElementById("logout").style.display = "inline-block";
+        } else {
+            document.getElementById("login").style.display = "inline-block";
+            document.getElementById("register").style.display = "inline-block";
+            document.getElementById("logout").style.display = "none";
+        }
+    };
+</script>
